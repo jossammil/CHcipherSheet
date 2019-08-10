@@ -5,7 +5,6 @@ Created on Fri Aug  9 2019
 @author: jossammil
 """
 
-
 #%%
 
 import random
@@ -28,8 +27,6 @@ my_rotorlist = make_rotor_list()
 print(my_rotorlist)
 
 
-
-
 #%%
 #now create a rotor list for 31 days that does not repeat consecutive days 
 
@@ -43,13 +40,26 @@ for x in range(30):
             inter_rotor = make_rotor_list()
         rotors_month.append(inter_rotor)
         
-
         
 #%%
 #Testing the 31 day rotorlist
         
 print(rotors_month)      
 
+
+#%%
+#Ring Settings
+#-- values 1-26, can be duplicate (26x26x26)
+#-- 3 columns, 1 value range(26) per column
+
+ring_col = []
+for i in range(31):
+    ring_row = []    
+    for j in range(3):
+        ring_row.insert(j, random.choice(range(1, 26)))
+    ring_col.insert(i, ring_row)
+    
+print(ring_col)
 
 
 #%%
@@ -75,6 +85,28 @@ for i in range(10):
     
 print(pluglist_JOIN)
 
-    
+
+#%%
+#kengruppen -- last columns
+#-- can be repeating letters in sequence, for each selection
+#-- 4 columns, 3 letters per column 
+
+letter_opts = list(string.ascii_uppercase)
+
+msg_col = []
+for i in range(31):
+    msg_row = []
+    for j in range(4):
+        msg_posi = []
+        for k in range(3):
+            msg_posi.insert(k, random.choice(letter_opts))
+        msg_row.insert(j, msg_posi)
+    msg_col.insert(i, msg_row)
+
+print(msg_posi)
+print(msg_row)
+print(msg_col)
 
 
+#%%
+#Next -- to create the dataframe
