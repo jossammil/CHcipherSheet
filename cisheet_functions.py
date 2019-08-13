@@ -67,23 +67,29 @@ print(ring_col)
 
 import string
 
-pluglist_A = []
-pluglist_B = []
-letter_opts = list(string.ascii_uppercase)
-for i in range(10):
-    pluglist_A.insert(i, random.choice([j for j in letter_opts if j not in pluglist_A]))
-for i in range(10):
-    pluglist_B.insert(i, random.choice([j for j in letter_opts if j not in pluglist_B and j not in pluglist_A]))
+def make_pluglist():
+    pluglist_A = []
+    pluglist_B = []
+    letter_opts = list(string.ascii_uppercase)
+    for i in range(10):
+        pluglist_A.insert(i, random.choice([j for j in letter_opts if j not in pluglist_A]))
+    for i in range(10):
+        pluglist_B.insert(i, random.choice([j for j in letter_opts if j not in pluglist_B and j not in pluglist_A]))
     
-pluglist_JOIN = []
-for i in range(10):
-    pluglist_JOIN.insert(i, list((pluglist_A[i], pluglist_B[i])))
-
+    pluglist_JOIN = []
+    for i in range(10):
+        pluglist_JOIN.insert(i, list((pluglist_A[i], pluglist_B[i])))
+    return pluglist_JOIN
     
 #%%
+# Now create the pluglist for the month
+
+pluglist_month = []
+for i in range(31):
+    pluglist_month.insert(i, make_pluglist())
+
 #Test the pluglist
-    
-print(pluglist_JOIN)
+print(pluglist_month)
 
 
 #%%
@@ -103,10 +109,12 @@ for i in range(31):
         msg_row.insert(j, msg_posi)
     msg_col.insert(i, msg_row)
 
+
 print(msg_posi)
 print(msg_row)
 print(msg_col)
 
 
 #%%
+#Next -- convert to numpy/pandas 
 #Next -- to create the dataframe
