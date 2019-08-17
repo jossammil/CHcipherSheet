@@ -1,9 +1,13 @@
 # More package/installation notes
 
-We will also need the pdfkit and Jinja2 packages installed, which will also 
-include the need for wkhtmltopdf installation.  
+We will also need to install the pdfkit and Jinja2 packages, which will also 
+include wkhtmltopdf installation.  
 
 
+Workflow from [Mark Nagelberg](https://towardsdatascience.com/creating-pdf-reports-with-python-pdfkit-and-jinja2-templates-64a89158fa2d)
+ 
+  
+  
 
 ### For installing pdfkit from conda (noarch version)...
 
