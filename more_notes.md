@@ -3,8 +3,9 @@
 For printing the dataframe to a pdf, I used the [Workflow from Mark Nagelberg](https://towardsdatascience.com/creating-pdf-reports-with-python-pdfkit-and-jinja2-templates-64a89158fa2d)  
   
   
-We will also need to install the pdfkit and Jinja2 packages, which will also 
-include wkhtmltopdf installation.  
+We will also need to install the [pdfkit](https://anaconda.org/conda-forge/python-pdfkit) 
+and [Jinja2](https://anaconda.org/anaconda) packages, which will also 
+include [wkhtmltopdf](http://wkhtmltopdf.org/) installation (if linux install).  
 
   
 
