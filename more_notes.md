@@ -1,12 +1,11 @@
 # More package/installation notes
 
+For printing the dataframe to a pdf, I used the [Workflow from Mark Nagelberg](https://towardsdatascience.com/creating-pdf-reports-with-python-pdfkit-and-jinja2-templates-64a89158fa2d)  
+  
+  
 We will also need to install the pdfkit and Jinja2 packages, which will also 
 include wkhtmltopdf installation.  
 
-
-Workflow from [Mark Nagelberg](https://towardsdatascience.com/creating-pdf-reports-with-python-pdfkit-and-jinja2-templates-64a89158fa2d)
- 
-  
   
 
 ### For installing pdfkit from conda (noarch version)...
