@@ -31,7 +31,7 @@ print(my_rotorlist)
 #now create a rotor list for 31 days that does not repeat consecutive days 
 
 rotors_month = []
-for x in range(30):
+for x in range(31):
     inter_rotor = make_rotor_list()
     if x == 0:
         rotors_month.append(inter_rotor)
@@ -97,7 +97,7 @@ print(pluglist_month)
 #-- can be repeating letters in sequence, for each selection
 #-- 4 columns, 3 letters per column 
 
-letter_opts = list(string.ascii_uppercase)
+letter_opts = list(string.ascii_lowercase)
 
 msg_col = []
 for i in range(31):
@@ -113,6 +113,11 @@ for i in range(31):
 print(msg_posi)
 print(msg_row)
 print(msg_col)
+
+#%%
+
+# add a days list; reverse string with '.'
+day_numbers = list(map(lambda x: str(x) + '.', list(range(31, 0, -1))))
 
 
 #%%
