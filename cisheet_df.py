@@ -67,3 +67,5 @@ ci_df['kengruppen'] = ['  '.join(str(i) for i in sublist) for sublist in msg_col
 # check the df 
 ci_df
 
+
+
